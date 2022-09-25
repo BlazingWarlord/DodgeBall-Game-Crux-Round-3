@@ -23,9 +23,11 @@ public class PowerUpsManager : MonoBehaviour
     {
         if(other.tag == "Player" && this.gameObject.tag == "Jump_High")
         {
-            
-            pm = other.transform.parent.gameObject.transform.GetComponent<PlayerMove>();
-            pm.jump_force += 10000f;
+
+            if (PlayerPrefs.GetInt("Health") > 4)
+            {
+                PlayerPrefs.SetInt("Health", PlayerPrefs.GetInt("Health") - 1);
+            }
             Destroy(this.gameObject);
         }
 

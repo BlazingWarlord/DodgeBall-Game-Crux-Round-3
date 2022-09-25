@@ -7,6 +7,7 @@ public class EnemyThrow : MonoBehaviour
     public GameObject ball_prefab;
     public float throw_speed;
     public bool waitdone = true;
+    public float delay_no;
     bool isc;
     bool isc1;
     
@@ -91,7 +92,8 @@ public class EnemyThrow : MonoBehaviour
     IEnumerator waitbeforethrow()
     {
         isc1 = true;
-        yield return new WaitForSeconds(Random.Range(1,2));
+        delay_no = Random.Range(0.2f,2f);
+        yield return new WaitForSeconds(delay_no);
         isc1 = false;
     }
 }

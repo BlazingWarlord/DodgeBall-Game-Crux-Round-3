@@ -83,9 +83,9 @@ Material:
     - _GlossMapScale: 1
     - _Glossiness: 0
     - _GlossyReflections: 0
-    - _HoloDistance: 0.48
-    - _HoloSpeed: 5
-    - _HoloValue: 10
+    - _HoloDistance: 0.41
+    - _HoloSpeed: 7.9
+    - _HoloValue: 8.8
     - _LightingEnabled: 1
     - _Metallic: 0
     - _Mode: 0
@@ -103,10 +103,10 @@ Material:
     - _ZWrite: 1
     m_Colors:
     - _CameraFadeParams: {r: 0, g: Infinity, b: 0, a: 0}
-    - _Color: {r: 0.015110518, g: 0.18867922, b: 0, a: 0.18431373}
+    - _Color: {r: 0.20754719, g: 0.20754719, b: 0.20754719, a: 0.8862745}
     - _EmissionColor: {r: 0.47703037, g: 0.8490566, b: 0.47579208, a: 1}
     - _GlitchDirection: {r: 0, g: 1, b: 0, a: 0}
-    - _HoloColor: {r: 0.07551641, g: 0.5377358, b: 0, a: 1}
+    - _HoloColor: {r: 0.05660379, g: 0.055215396, b: 0.055215396, a: 1}
     - _HoloDirection: {r: 0, g: 1, b: 0, a: 0}
     - _OutlineColor: {r: 0.010944401, g: 0.26415092, b: 0, a: 1}
     - _RimColor: {r: 0.0033674983, g: 0.254717, b: 0, a: 1}
