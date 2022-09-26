@@ -32,7 +32,7 @@ public class BallThrow : MonoBehaviour
         {
             ball_rb = ball.GetComponent<Rigidbody>();
             
-            if(Input.GetMouseButtonDown(0))
+            if(Input.GetMouseButtonDown(0) && !Input.GetKey(KeyCode.LeftControl))
             {
                 ball_rb.isKinematic = false;
                 ball_rb.useGravity = true;

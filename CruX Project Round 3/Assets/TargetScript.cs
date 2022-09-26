@@ -29,6 +29,8 @@ public class TargetScript : MonoBehaviour
                 PlayerPrefs.SetInt("Hits", PlayerPrefs.GetInt("Hits") + 1);
                 collision.gameObject.tag = "Ball";
                 PlayerPrefs.SetInt("Health", PlayerPrefs.GetInt("Health") - 1);
+                AudioSource aus = this.GetComponent<AudioSource>();
+                aus.Play();
             }
             else
             {
@@ -44,6 +46,8 @@ public class TargetScript : MonoBehaviour
                 Debug.Log(this.transform.name + " hit by " + collision.transform.name + "By ball of velocity" + rb.velocity.sqrMagnitude);
                 PlayerPrefs.SetInt("Score", PlayerPrefs.GetInt("Score") + 1);
                 collision.gameObject.tag = "Ball";
+                AudioSource aus = this.GetComponent<AudioSource>();
+                aus.Play();
             }
             else
             {

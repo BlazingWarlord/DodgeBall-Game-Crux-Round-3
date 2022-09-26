@@ -7,10 +7,13 @@ public class PowerUpsManager : MonoBehaviour
     public PlayerMove pm;
     public GameObject ball_prefab;
     public Transform big_ball;
+    public AudioSource ps_sound;
+    float delay = 1.5f;
+    Collider col;
     // Start is called before the first frame update
     void Start()
     {
-        
+        col = GetComponent<Collider>();
     }
 
     // Update is called once per frame
@@ -28,7 +31,9 @@ public class PowerUpsManager : MonoBehaviour
             {
                 PlayerPrefs.SetInt("Health", PlayerPrefs.GetInt("Health") - 1);
             }
-            Destroy(this.gameObject);
+            ps_sound.Play();
+            col.enabled = false;
+            Destroy(this.gameObject, 1.5f);
         }
 
         if(other.tag == "Player" && this.gameObject.tag == "SloMo")
@@ -37,9 +42,15 @@ public class PowerUpsManager : MonoBehaviour
             {
                 PlayerPrefs.SetInt("Health", PlayerPrefs.GetInt("Health") + 1);
             }
-            Destroy(this.gameObject);
+            ps_sound.Play();
+            col.enabled = false;
+            Destroy(this.gameObject, 1.5f);
+
+
         }
 
         
     }
+
+    
 }

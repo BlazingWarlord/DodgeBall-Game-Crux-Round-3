@@ -10,6 +10,7 @@ public class EnemyThrow : MonoBehaviour
     public float delay_no;
     bool isc;
     bool isc1;
+    float delay_count;
     
     public float throw_error = 0f;
 
@@ -18,6 +19,7 @@ public class EnemyThrow : MonoBehaviour
     {
         isc = false;
         isc1 = false;
+        delay_count = 5f;
     }
 
     // Update is called once per frame
@@ -50,16 +52,17 @@ public class EnemyThrow : MonoBehaviour
 
         else
         {
+            delay_count -= Time.deltaTime;
             RaycastHit target;
             if (Physics.Raycast(transform.position, transform.forward, out target))
                 
             {
                 Debug.Log(target.transform.name);
-                if (target.transform.tag == "Player")
+                if (target.transform.tag == "Player" || delay_count <= 0)
                 {
                     GameObject ball = transform.GetChild(0).gameObject;
                     Rigidbody ball_rb = ball.GetComponent<Rigidbody>();
-
+                    delay_count = 10;
                     if (!isc1)
                     {
 

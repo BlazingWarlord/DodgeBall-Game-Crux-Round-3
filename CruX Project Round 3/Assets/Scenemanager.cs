@@ -64,4 +64,9 @@ public class Scenemanager : MonoBehaviour
     {
         SceneManager.LoadScene(5);
     }
+
+    public void HowToPlay()
+    {
+        SceneManager.LoadScene(6);
+    }
 }
