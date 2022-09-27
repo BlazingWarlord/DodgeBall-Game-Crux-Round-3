@@ -12,11 +12,15 @@ public class PlayerMove : MonoBehaviour
     public float jump_distance = 0.5f;
     public GameObject groundcheck;
     public bool is_ground = false;
+    public Camera cam1;
+    public Camera cam2;
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         speed = run_speed;
+        cam1.fieldOfView = PlayerPrefs.GetFloat("FOV",60);
+        cam2.fieldOfView = PlayerPrefs.GetFloat("FOV",60);
     }
 
     // Update is called once per frame

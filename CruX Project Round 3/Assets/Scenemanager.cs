@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class Scenemanager : MonoBehaviour
 {
     public Slider sensitivity;
+    public Slider fov;
     // Start is called before the first frame update
     void Start()
     {
@@ -57,6 +58,7 @@ public class Scenemanager : MonoBehaviour
     public void Settings()
     {
         PlayerPrefs.SetInt("Sensitivity",(int)sensitivity.value);
+        PlayerPrefs.SetFloat("FOV",fov.value);
         
     }
 
